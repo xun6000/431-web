@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pizza Guys Order Form</title>
+</head>
+<body>
+
+	<h2>
+		Pizza Guys Order Form
+	</h2>
+
+    <img src="download.jpg" alt="Pizza" style="width:304px;height:228px;">
+
+	<form id="orderForm" method="" action="#">
+	Name<br>
+    <input type= "text" name = "name" placeholder="your name" required>
+    <br>
+    <br>
+
+    Address<br>
+    <input type= "text" name = "address" placeholder="your name" required> <br><br>
+
+    Phone Number:123-123-1234<br>
+    <input type= "text" name = "number" placeholder="your name" pattern='\d\d\d-\d\d\d-\d\d\d\d' required> 
+    <br><br>
+
+    Size<br>
+<input type="radio" name="size" id="L" value="
+    large">Large 
+<input type="radio" name="size" id="M" value="medium"> Medium<br>
+    <input type="radio" name="size" id="S" value="small" > Small<br>
+    
+    
+    <br>
+    <br>
+
+    Pizza Toppings<br>
+
+    <input type="checkbox" name="topping" value="sausage"> Sausage
+	<input type="checkbox" name="topping" value="pepperoni"> Pepperoni
+    <input type="checkbox" name="topping" value="olives"> Olives
+    <input type="checkbox" name="topping" value="anchovies"> Onions<br>Anchovies
+    <input type="checkbox" name="topping" value="onions"> Onions<br>
+
+    <input type="submit" value="Place Order" onclick="return validateCheck()">
+    <input type="reset" value="clear">
+
+</form>
+<script>
+function validateCheck(form){
+	if (document.getElementById('S').checked || document.getElementById('M').checked 
+|| document.getElementById('L').checked){
+	
+}else{
+	window.alert("Select a Size")
+	return false;
+}
+}
+</script>
+
+</body>
